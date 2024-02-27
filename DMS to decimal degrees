@@ -1,0 +1,21 @@
+def dms_to_decimal(degrees, minutes, seconds):
+    if degrees < 0:
+        result = degrees - minutes/60 - seconds/3600
+    else:
+        result = degrees + minutes/60 + seconds/3600
+    return result
+
+def main():
+    # Take user input for degrees, minutes, and seconds
+    degrees = float(input("Enter degrees: "))
+    minutes = float(input("Enter minutes: "))
+    seconds = float(input("Enter seconds: "))
+
+    # Convert DMS to decimal degrees
+    decimal_degrees = dms_to_decimal(degrees, minutes, seconds)
+
+    # Print the result
+    print("Decimal Degrees:", decimal_degrees)
+
+if __name__ == "__main__":
+    main()
